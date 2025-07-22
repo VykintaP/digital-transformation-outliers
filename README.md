@@ -1,42 +1,45 @@
-Digital Transformation Outliers & Structural Shifts
+# 🚀 Digital Transformation Outliers & Structural Shifts
 
-* Overview:
+* **Overview:**
 
-  * Analyzes EU countries' adoption of digital technologies and structural economic changes over the past decade.
-  * Uses unsupervised ML to detect outliers in ICT adoption.
-  * Measures structural shifts with cosine distance on industry shares.
+  * Mirrors the complete Pandas + ML workflow from [Keith Galli’s course](https://www.youtube.com/watch?v=vmEHCJofslg), but applies it to real Eurostat data.
+  * Replaces Pokémon with EU countries’ digital adoption and economic sector data.
 
-* Goals:
+* **Goals:**
 
-  * Identify outliers in digital adoption (e.g. cloud, broadband, e-sales, AI) vs GDP.
-  * Compute how much each country’s economy changed from 2010 to 2023.
-  * Visualize findings with scatter plots and radar charts.
+  * Load & explore Eurostat ICT and GDP datasets.
+  * Demonstrate Pandas fundamentals: reading files, filtering, sorting, conditional updates.
+  * Group data by country or year to compute aggregates.
+  * Scale multi-feature ICT data (Cloud, Broadband, E-sales, AI).
+  * Use groupby to summarize by country or by time.
+  * Create new calculated columns and reshape data.
+  * Save cleaned datasets.
 
-* Methods & Tools:
+* **Methods & Tools:**
 
-  * pandas for cleaning & merging Eurostat data.
-  * sklearn IsolationForest & OneClassSVM for anomaly detection.
-  * scipy cosine distance for measuring changes.
-  * seaborn, matplotlib, (optionally plotly) for visuals.
+  * pandas for ETL, groupby, and manipulation
+  * seaborn, matplotlib for plots
+  * sklearn for scaling & later ML (PCA, clustering, outlier detection)
 
-* Project structure:
+* **Project structure:**
 
-  * notebooks/: Jupyter notebooks for EDA, ML, plotting
-  * scripts/: Python scripts for ETL, metrics, visuals
-  * docs/: Extended write-ups, summaries
-  * reports/: Final charts & tables
-  * README.md: Overview & instructions
-  * .gitignore: Excludes data & large outputs
+  * notebooks/: Jupyter notebooks following step-by-step course exercises
+  * scripts/: Python scripts for data cleaning & functions
+  * docs/: Explanation notes & examples
+  * reports/: Outputs like charts & CSV summaries
+  * README.md: This overview
 
-* How to run:
+* **How to run:**
 
   * Clone the repo
-  * Install packages (via requirements.txt or pip)
-  * Run notebooks step by step to load data, fit models, compute distances, create plots.
+  * Install packages (`pip install -r requirements.txt`)
+  * Run notebooks in order: loading, cleaning, groupby summaries, scaling, basic plots.
 
-* Current status:
+* **Current status:**
 
-  * [x] Initial structure & plan
-  * [ ] Build data pipeline
-  * [ ] Run ML models & cosine calculations
-  * [ ] Produce final visuals & summary
+  * [x] Project structure & plan drafted
+  * [ ] Load Eurostat ICT dataset, explore rows, columns, cells
+  * [ ] Filter & sort, conditional changes, create new columns
+  * [ ] Groupby summaries & aggregate stats
+  * [ ] Scale for future ML steps
+  * [ ] Visualize trends & save outputs
